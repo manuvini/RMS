@@ -1,0 +1,41 @@
+<template>
+
+    <lightning-card>
+        <div>
+            <h1 style="margin-left: 30px;">  Enter Name or Email to Search Customer </h1>
+            <lightning-input 
+            type="text" 
+            value={customerName} 
+            onchange={handleOnChangeCustomerName}>
+            </lightning-input>
+    
+            <!-- <lightning-input
+            type="text"
+            label="Customer Email"
+            value={customerEmail}
+            onchange={handleOnChangeCustomerEmail}></lightning-input> -->
+    
+            <div>
+
+                <lightning-button variant="brand"
+                label="Search Customer"
+                title="Click here to initiate the search"
+                onclick={initiateSearch}>
+        
+                </lightning-button>
+        
+                <lightning-button variant="brand"
+                label="Clear Data"
+                title="Click here to initiate the search"
+                onclick={clearData}>
+        
+                </lightning-button>
+
+            </div>
+          
+        </div>
+
+
+    </lightning-card>
+   
+</template>
