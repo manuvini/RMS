@@ -1,8 +1,12 @@
 <template>
     <lightning-card>
-        <c-searchcustomer ongetcustomerdetails={handleCustomer}  onclearcustomer={handleClear}></c-searchcustomer>
-        <c-customersearchresult searchresults={searchDetail}></c-customersearchresult>
-
+        <lightning-layout multiple-rows> 
+            <lightning-layout-item padding="around-small" size="4">
+            <c-searchcustomer ongetcustomerdetails={handleCustomer} onclearcustomer={handleClear}></c-searchcustomer>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="10">
+            <c-customersearchresult searchresults={searchDetail}></c-customersearchresult>
+            </lightning-layout-item>
+            </lightning-layout>
     </lightning-card>
- 
 </template>

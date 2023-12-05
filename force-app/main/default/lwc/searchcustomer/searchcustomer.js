@@ -10,10 +10,7 @@ export default class Searchcustomer extends LightningElement {
         this.customerName=event.target.value;
         //alert(this.customerName)
     }
-    // handleOnChangeCustomerEmail(event){
-    //     this.customerEmail=event.target.value;
-    //     //alert(this.customerEmail)
-    // }
+   
 
     clearData(){
         this.customerName = '';
@@ -22,7 +19,7 @@ export default class Searchcustomer extends LightningElement {
 
     initiateSearch(){
         
-        getCustomer({customerName:this.customerName}) // Promise call Internally
+        getCustomer({customerNameOrEmail:this.customerName}) // Promise call Internally
         
         .then(result=>{this.dispatchEvent(new CustomEvent('getcustomerdetails',{detail:result}))
     })
